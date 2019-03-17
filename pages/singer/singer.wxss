@@ -1,0 +1,131 @@
+.swiper{
+  width: 97%;
+  margin: 20rpx auto;
+  
+}
+
+.swiper-img{
+  width: 100%;
+  height: 150px;
+  border-radius: 10rpx;
+}
+
+.header{
+  margin: 0 20rpx;
+}
+
+.title{
+  font-size: 24rpx;
+}
+
+.line{
+  height: 1px;
+  margin-top: 10rpx;
+  background-color: #ff0000;
+}
+
+.singer-container{
+  margin: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.singer-img{
+  width: 250rpx;
+  height: 250rpx;
+  border-radius: 10rpx;
+}
+
+.music-list{
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx 20rpx;
+  width: 450rpx;
+}
+
+.song-class{
+  font-size: 28rpx;
+  margin:8rpx 40rpx;
+  text-align: left;
+  padding-left: 20rpx;
+  font-weight: bold;
+  color: rgb(158, 155, 155);
+}
+
+.profile{
+  padding: 10rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+  width: 400rpx;
+}
+
+.level1{
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-name{
+  font-size: 30rpx;
+}
+
+.sex-img{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 20rpx;
+  margin-top: 5rpx;
+}
+
+.level-2{
+  display: flex;
+  flex-direction: row;
+  height: 60rpx;
+}
+
+.level2{
+  border-radius: 15rpx;
+  background-color: #f33636;
+  width: 120rpx;
+  margin: 15rpx 0;
+  height: 40rpx;
+}
+
+.level-img{
+  width: 20rpx;
+  height: 20rpx;
+  padding: 8rpx 0;
+  margin-left: 20rpx;
+}
+
+.classify{
+  color: white;
+  font-size: 20rpx;
+}
+
+.tag{
+  line-height: 60rpx;
+  margin-left: 10rpx;
+}
+
+.profile-hr{
+  height: 1px;
+  margin-top: 10rpx;
+  background-color: #dddbdb;
+}
+
+.other{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+
+.other-detail{
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #dddbdb;
+  padding-right: 20rpx;
+  margin-right: 20rpx;
+}
+
+.location{
+  margin-top: 15rpx;
+}

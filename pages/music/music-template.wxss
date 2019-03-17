@@ -1,0 +1,18 @@
+.musicList{
+  display: flex;
+  flex-direction: column;
+  padding: 0 10rpx;
+}
+
+.musicListImage{
+  border-radius: 10rpx;
+  width: 218rpx;
+  height: 218rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+
+.musicListTitle{
+  font-size: 24rpx;
+  margin-bottom: 20rpx;
+}

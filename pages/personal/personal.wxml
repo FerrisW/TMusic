@@ -1,0 +1,17 @@
+<import src="../single-song/single-song-template.wxml" />
+<view class='container'>
+  <view class='bg-img' style="background: url('{{picUrl}}') no-repeat #000;"></view>
+  <view class='profile'>
+    <image src='{{picUrl}}' class='profile-img'></image>
+    <text class='profile-name'>{{name}}</text>
+    <text class='profile-total'>累计听歌:{{listenSongs}}首</text>
+  </view>
+  <view class='favorite'>
+    <text class='favorite-title'>我喜欢的音乐({{songTotal}}首)</text>
+  </view>
+  <view class='song-lists'>
+    <block wx:for="{{songList}}" wx:for-item="song">
+      <template is="singleSongTemplate" data="{{...song}}"></template>
+    </block>
+  </view>
+</view>

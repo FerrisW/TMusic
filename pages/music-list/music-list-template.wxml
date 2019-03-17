@@ -1,0 +1,11 @@
+<import src='../music/music-template.wxml' />
+<template name='musicListTemplate'>
+  <!-- <view class='musicListsContainer'> -->
+  <view class='lists'>
+    <block wx:for="{{recommend}}" wx:for-item="music">
+      <view class='singlemusic'>
+        <template is='musicTemplate' data="{{...music}}"></template>
+      </view>
+    </block>
+  </view>
+</template>

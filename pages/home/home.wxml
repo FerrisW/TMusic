@@ -1,0 +1,28 @@
+<import src='../music-list/music-list-template.wxml' />
+<import src="../single-song/single-song-template.wxml" />
+<view class='container'>
+  <!-- 搜索框 -->
+  <view class="search">
+    <icon type="search" class="search-img" size="13" color="#405f80"></icon>
+    <input type="text" value='{{searchValue}}' placeholder="慢慢喜欢你、起风了" placeholder-class="placeholder" bindinput='onBindInput' bindfocus="onBindFocus" bindconfirm="onBindConfirm" />
+    <image wx:if="{{searchPanelShow}}" src="/images/xx.png" class="xx-img" catchtap="onCancelImgTap"></image>
+  </view>
+  <!-- 推荐歌单 -->
+  <view class='music-list-container' wx:if="{{containerShow}}">
+    <view class='inner-container'>
+      <view class='music-head'>
+        <text class='title'>推荐歌单</text>
+        <view class='more' catchtap='onMoreTap'>
+          <text class='more-text'>更多</text>
+          <image class='more-img' src='/images/arrow-right.png'></image>
+        </view>
+      </view>
+    </view>
+    <template is='musicListTemplate' data="{{recommend}}"></template>
+  </view>
+  <view class='searchResult' wx:if="{{searchPanelShow}}">
+    <block wx:for="{{searchResult}}" wx:for-item="song">
+      <template is="singleSongTemplate" data="{{...song}}"></template>
+    </block>
+  </view>
+</view>

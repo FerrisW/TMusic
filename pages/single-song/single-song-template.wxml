@@ -1,0 +1,10 @@
+<template name="singleSongTemplate">
+  <view class='song' catchtap='onSongTap' data-sName="{{songName}}">
+    <text class='song-index'>{{songNum}}</text>
+    <view class='song-detail'>
+      <text class='song-name'>{{songName}}</text>
+      <text class='song-author'>{{songAuthor}}</text>
+    </view>
+    <image src='{{songImg}}' class='song-img'></image>
+  </view>
+</template>

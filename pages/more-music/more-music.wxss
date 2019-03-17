@@ -1,0 +1,4 @@
+@import '../music-list/music-list-template.wxss';
+.more-list-container{
+  margin: 20rpx 0;
+}

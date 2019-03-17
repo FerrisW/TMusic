@@ -1,0 +1,12 @@
+<view class='container'>
+  <view class='input-class'>
+    <text class='input-text'>账号：</text>
+    <input bindinput="usernameInput"  type='text' placeholder='请输入手机号' placeholder-class='input-placeholder'></input>
+  </view>
+  <view class='input-class'>
+    <text class='input-text'>密码：</text>
+    <input bindinput="passwordInput" type='password' placeholder='请输入密码' placeholder-class='input-placeholder'></input>
+  </view>
+  <button class='button-login' catchtap='login'>登录</button>
+  <text class='nologin' bindtap='toHome'>暂不登录</text>
+</view>

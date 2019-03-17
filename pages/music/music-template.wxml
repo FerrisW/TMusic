@@ -1,0 +1,6 @@
+<template name='musicTemplate'>
+  <view class='musicList' data-listId="{{listId}}" catchtap='onMusicTap' data-description="{{description}}" data-imgUrl="{{coverImgUrl}}" data-title="{{title}}" data-num="{{num}}">
+    <image src='{{coverImgUrl}}' class='musicListImage'></image>
+    <text class='musicListTitle'> {{title}} </text>
+  </view>
+</template>

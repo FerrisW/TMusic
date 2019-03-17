@@ -1,0 +1,66 @@
+@import '../single-song/single-song-template.wxss';
+.container{
+  background-color: rgb(83, 76, 76);
+  opacity: 0.8;
+  padding: 40rpx 40rpx 0 40rpx;
+  min-height: 1170rpx;
+}
+
+.bg-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(30px);
+}
+
+.top-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.top-image{
+  width: 400rpx;
+  height: 400rpx;
+  padding: 20rpx 135.8rpx;
+}
+
+.top-title{
+  text-align: center;
+  font-size: 28rpx;
+  color: white;
+}
+
+.hr{
+  height: 1px;
+  background-color: rgb(228, 228, 228);
+  margin: 20rpx 0;
+  opacity: 0.1;
+}
+
+.content-container{
+  padding: 10rpx 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.tag-title{
+  color: #fff;
+}
+
+.content-detail{
+  margin: 20rpx 0;
+  color: rgb(236, 232, 232)
+}
+
+.content-detail{
+  font-size: 26rpx;
+}
+
+.song-lists {
+  display: flex;
+  flex-direction: column;
+}

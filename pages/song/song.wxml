@@ -1,0 +1,62 @@
+<wxs module="foo">
+  module.exports = {
+    toStr: function(n) {
+      n = Math.floor(n)
+      return n < 10 ? "0" + n : "" + n
+    }
+  }
+</wxs>
+<view class='container'>
+  <view class='innerBG' style="background: url('{{songImg}}') no-repeat #000;"></view>
+  <view class='song-info'>
+    <text class='song-name'>{{songname}}</text>
+    <text class='song-author'>{{songAuthor}}</text>
+  </view>
+  <view class='cd-info'>
+    <view class='cd-inner'>
+      <image class='{{xz}}' src='{{songImg}}'></image>
+    </view>
+  </view>
+  <scroll-view class='scroll' scroll-y="true" scroll-into-view="{{currentLrc}}" scroll-with-animation="true">
+    <view class='{{currentLrc === "el-"+index?"white":""}}' id="el-{{index}}" wx:for="{{lrc}}" wx:key="{{index}}">{{lrc[index]}}</view>
+  </scroll-view>
+  <view class='ctre-box'>
+    <view class='slider-box'>
+      <text class='slider-text st-l'>{{foo.toStr(currentTime/60)}}:{{foo.toStr(currentTime%60)}}</text>
+      <slider bindchanging="changing" bindchange="change" value='{{currentTime}}' block-size="20" min="0" max="{{duration}}" step="1" class='slider-inner'></slider>
+      <text class='slider-text st-r'>{{foo.toStr(duration/60)}}:{{foo.toStr(duration%60)}}</text>
+    </view>
+    <view class='menuBtn'>
+      <view class='music-ctr'>
+        <block wx-if="{{playType==0}}">
+          <image src="/images/icon/listcycle.png" class='music-sort' data-type="{{playType}}" bindtap='changePlayType'></image>
+        </block>
+        <block wx-if="{{playType==1}}">
+          <image src="/images/icon/sjcircle.png" class='music-sort' data-type="{{playType}}" bindtap='changePlayType'></image>
+        </block>
+        <block wx-if="{{playType==2}}">
+          <image src="/images/icon/singlecircle.png" class='music-sort' data-type="{{playType}}" bindtap='changePlayType'></image>
+        </block>
+      </view>
+      <view class='mc-inner'>
+        <image src='/images/icon/prev.png' class='mci-icon mci-between'></image>
+        <image wx:if="{{playState}}" src='/images/icon/play.png' class='mci-icon mci-play' catchtap='pauseMusic'></image>
+        <image wx:else="{{playState}}" src='/images/icon/pause.png' class='mci-icon mci-play' catchtap='pauseMusic'></image>
+        <image src='/images/icon/next.png' class='mci-icon mci-between'></image>
+      </view>
+      <view class='music-list-btn'>
+        <image class='list-btn-img' src='/images/icon/playlist.png' bindtap='showPlayList'></image>
+      </view>
+    </view>
+  </view>
+  <!-- <view class='play-list' hidden="{{showPlayList}}">
+    <view class='play-list-header'>
+      <text>播放列表(132)</text>
+      <text class='play-list-clear'>清空</text>
+    </view>
+    <view class='play-list-inner'>
+      <view class='play-item'>海阔天空</view>
+    </view>
+    <view class='play-list-bottom' bindtap='closePlayList'>关闭</view>
+  </view> -->
+</view>

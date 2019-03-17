@@ -1,0 +1,43 @@
+.song {
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  align-items: cneter;
+}
+
+.song-index {
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  padding: 10rpx;
+  margin-right: 20rpx;
+}
+
+.song-detail {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding: 10rpx;
+  position: relative;
+  flex: 1;
+}
+
+.song-name {
+  font-size: 26rpx;
+  color: rgb(168, 168, 168);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 20rpx;
+}
+
+.song-author {
+  font-size: 24rpx;
+  color: rgb(88, 88, 88);
+}
+
+.song-img {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}

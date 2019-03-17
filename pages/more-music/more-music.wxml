@@ -1,0 +1,4 @@
+<import src='../music-list/music-list-template.wxml' />
+<view class='more-list-container'>
+  <template is='musicListTemplate' data="{{recommend}}"></template>
+</view>

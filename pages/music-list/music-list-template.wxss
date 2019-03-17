@@ -1,0 +1,9 @@
+@import '../music/music-template.wxss';
+.lists{
+  padding: 0 17rpx;
+}
+
+.singlemusic{
+  float: left;
+  margin-bottom: 20rpx;
+}

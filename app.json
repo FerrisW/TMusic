@@ -1,0 +1,50 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/home/home",
+    "pages/personal/personal",
+    "pages/singer/singer",
+    "pages/song/song",    
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/more-music/more-music",
+    "pages/music-detail/music-detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#e22c25",
+    "navigationBarTitleText": "TMusic",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "color": "#c0c0c0",
+    "selectedColor": "#f25752",
+    "list":[
+      {
+        "pagePath":"pages/singer/singer",
+        "text":"音乐人",
+        "iconPath":"/images/Tab/Singer.png",
+        "selectedIconPath": "/images/Tab/SingerSelected.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "每日推荐",
+        "iconPath": "/images/Tab/Recommend.png",
+        "selectedIconPath": "/images/Tab/RecommendSelected.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的音乐",
+        "iconPath": "/images/Tab/Song.png",
+        "selectedIconPath": "/images/Tab/SongSelected.png"
+      }
+    ],
+    "position":"bottom"
+  },
+  "networkTimeout":{
+    "request": 10000
+  },
+  "requiredBackgroundModes": [
+    "audio"              
+  ]
+}

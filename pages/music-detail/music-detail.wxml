@@ -1,0 +1,18 @@
+<import src="../single-song/single-song-template.wxml" />
+<view class='container'>
+  <view class='bg-img' style="background: url('{{imgUrl}}') no-repeat #000;"></view>
+  <view class='top-container'>
+    <image src="{{imgUrl}}" class='top-image'></image>
+    <!-- <text class='top-title'>「粤」作词人｜陈咏谦笔下的直白深情</text> -->
+    <text class='top-title'>{{title}}</text>
+  </view>
+  <view class='hr'></view>
+  <view class='content-container'>
+    <text class='content-detail'>{{description}}</text>
+  </view>
+  <view class='song-lists'>
+    <block wx:for="{{list}}" wx:for-item="song">
+      <template is="singleSongTemplate" data="{{...song}}"></template>
+    </block>
+  </view>
+</view>
